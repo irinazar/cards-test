@@ -32,7 +32,7 @@ export const getAllPosts = createAsyncThunk<ExtendedPost[], void>(
         if (!response.data) {
           throw new Error("Нет постов");
         }
-        
+
         localStorage.setItem(ALL_POSTS, JSON.stringify(postsWithLikes));
 
         return postsWithLikes;

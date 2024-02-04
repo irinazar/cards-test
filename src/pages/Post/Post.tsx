@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import styles from "./Post.module.scss";
 import ButtonDisLike from "../../components/UI/ButtonDisLike/ButtonDisLike";
 import ButtonLike from "../../components/UI/ButtonLike/ButtonLike";
@@ -7,14 +7,15 @@ import { useAppDispatch, useAppSelector } from "../../hooks/reduxHooks";
 import { useLike } from "../../hooks/useLike";
 import { onePost } from "../../features/onePostThunk";
 
-function Post(): JSX.Element {
-  const { voiceLike, handlerVoiceDisLike, handlerVoiceLike, voiceDis } =
-    useLike();
-  const { postId } = useParams();
-  const postisd = Number(postId);
-
+export default function Post(): JSX.Element {
   const dispatch = useAppDispatch();
   const post = useAppSelector((store) => store.posts.onePost);
+
+  const { voiceLike, handlerVoiceDisLike, handlerVoiceLike, voiceDis } =
+    useLike();
+
+  const { postId } = useParams();
+  const postisd = Number(postId);
 
   useEffect(() => {
     dispatch(onePost(Number(postId)));
@@ -57,5 +58,3 @@ function Post(): JSX.Element {
     </div>
   );
 }
-
-export default React.memo(Post);

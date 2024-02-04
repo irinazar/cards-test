@@ -6,6 +6,12 @@
   flex-direction: column;
 }
 
+@media (max-width: 768px) {
+  .container {
+    margin: 32px 16px; 
+}
+}
+
 .title {
   text-align: center;
   font-size: 60px;

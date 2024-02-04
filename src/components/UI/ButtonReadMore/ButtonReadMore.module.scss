@@ -9,3 +9,9 @@
   cursor: pointer;
   margin-left: auto;
 }
+
+@media (max-width: 768px) {
+  .btn {
+    padding: 5px 16px 
+  }
+}

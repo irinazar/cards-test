@@ -6,7 +6,7 @@ interface InputProps {
   onChange: React.ChangeEventHandler<HTMLInputElement>;
 }
 
-function Input({ onChange, value }: InputProps): JSX.Element {
+export default function Input({ onChange, value }: InputProps): JSX.Element {
   return (
     <div className={styles.inputContainer}>
       <input
@@ -19,5 +19,3 @@ function Input({ onChange, value }: InputProps): JSX.Element {
     </div>
   );
 }
-
-export default React.memo(Input);

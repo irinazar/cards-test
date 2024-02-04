@@ -11,11 +11,9 @@ import { useLike } from "../../hooks/useLike";
 
 export default function Main(): JSX.Element {
   const dispatch = useAppDispatch();
-
-
-  const { handleSearchChange, searchQuery } = useFilter();
   const posts = useAppSelector((store) => store.posts.allPosts) || [];
 
+  const { handleSearchChange, searchQuery } = useFilter();
   const { voiceLike, handlerVoiceDisLike, handlerVoiceLike, voiceDis } =
     useLike();
 
@@ -26,8 +24,6 @@ export default function Main(): JSX.Element {
       dispatch(getAllPosts());
     }
   }, [dispatch, searchQuery, voiceLike, voiceDis]);
-
-  console.log(posts);
 
   return (
     <div className={styles.container}>

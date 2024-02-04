@@ -25,39 +25,37 @@ function Card({
   disBool,
   likeBool,
 }: CardProps): JSX.Element {
-
-
   return (
-      <div className={styles.container}>
-        <div className={styles.image}>
-          <img src="public/Image.jpg" alt="img" />
+    <div className={styles.container}>
+      <div className={styles.image}>
+        <img src="public/Image.jpg" alt="img" />
+      </div>
+      <div className={styles.textContainer}>
+        <div className={styles.containerTitle}>
+          <div className={styles.title}>{title}</div>
         </div>
-        <div className={styles.textContainer}>
-          <div className={styles.containerTitle}>
-            <div className={styles.title}>{title}</div>
-          </div>
-          <div className={styles.readMore}>
-            <div className={styles.likeContainer}>
-              <div className={styles.like}>
-                <ButtonLike
-                  likeBool={likeBool}
-                  handlerVoiceLike={handlerVoiceLike}
-                  postId={postId}
-                />
-                <div className={styles.count}>{like}</div>
-              </div>
-              <div className={styles.like}>
-                <ButtonDisLike
-                  disBool={disBool}
-                  handlerVoiceDisLike={handlerVoiceDisLike}
-                  postId={postId}
-                />
-                <div className={styles.count}>{dislike}</div>
-              </div>
+        <div className={styles.readMore}>
+          <div className={styles.likeContainer}>
+            <div className={styles.like}>
+              <ButtonLike
+                likeBool={likeBool}
+                handlerVoiceLike={handlerVoiceLike}
+                postId={postId}
+              />
+              <div className={styles.count}>{like}</div>
             </div>
-            <ButtonReadMore postId={postId} />
+            <div className={styles.like}>
+              <ButtonDisLike
+                disBool={disBool}
+                handlerVoiceDisLike={handlerVoiceDisLike}
+                postId={postId}
+              />
+              <div className={styles.count}>{dislike}</div>
+            </div>
           </div>
+          <ButtonReadMore postId={postId} />
         </div>
+      </div>
     </div>
   );
 }

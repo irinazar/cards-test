@@ -33,6 +33,12 @@
   margin-bottom: 32px;
 }
 
+@media (max-width: 768px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
 .likeContainer {
   display: flex;
 }
