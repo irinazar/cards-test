@@ -1,0 +1,28 @@
+.container {
+  margin: 0 auto;
+  max-width: 1140px;
+  margin: 64px 130px;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  font-size: 60px;
+  line-height: 68px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.text {
+  line-height: 32px;
+  font-weight: 400;
+  margin-bottom: 32px;
+}
+
+.containerCard {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -12px;
+  justify-content: center;
+}
