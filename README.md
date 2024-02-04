@@ -1,30 +1,19 @@
-# React + TypeScript + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+Функциональные требования
+* На главной странице отображается список постов и строка поиска. Первый пост —
+на всю ширину, остальные — в две колонки. Оформление главной страницы и
+страницы поста смотреть в фигме.
+* Страница поста содержит картинку, заголовок, текст, блок с реакциями
+* Если пользователь поставил реакцию в списке постов — это должно быть
+отображено на странице конкретного поста, и наоборот.
+* Если пользователь обновил страницу, поставленные реакции не сохраняются
+* Фильтрация через поиск — серверная. Совпадение по полному названию поста
+* Данные для списка постов (в том числе с учетом фильтра), одного поста
+запрашиваем из https://jsonplaceholder.typicode.com/ (GET/posts, GET/posts/{id}).
+Посты в фигме только для примера. Их переносить НЕ нужно — все данные
+запрашиваем по апи.
+* В качестве картинок можно использовать статические изображения, или
+https://placehold.co/
+* Начальные значения счетчиков (в блоке с реакциями для каждого поста) —
+случайное число от 0 до 50
+* Не требуется pixel perfect, однако итоговый результат должен быть максимально
+близок к макету
