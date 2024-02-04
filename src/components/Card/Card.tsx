@@ -28,7 +28,6 @@ function Card({
 
 
   return (
-    <div>
       <div className={styles.container}>
         <div className={styles.image}>
           <img src="public/Image.jpg" alt="img" />
@@ -59,7 +58,6 @@ function Card({
             <ButtonReadMore postId={postId} />
           </div>
         </div>
-      </div>
     </div>
   );
 }
